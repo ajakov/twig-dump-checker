@@ -18,29 +18,23 @@ try {
         if (err) {
             throw(err);
         } else {
-            let errorMessage = '';
             let foundDumps = false;
             for(let i = 0; i < res.length; i++) {
                 let extension = path.extname(res[i]);
-                //let re = '/{{[ ]*dump\([^\)]*\)[ ]*}}/gm';
-
                 if(extension == '.twig') {
-                    let re = /dump\([^)]*\)/gm;
+                    let re = /{{[ ]*dump\([^)]*\)[ ]*}}/gm;
                     const data = fs.readFileSync(res[i], 'utf8')
                     var myArray = data.match(re);
                     if (myArray) {
                         foundDumps = true;
-                        errorMessage += "\n Found in " + res[i] + " : " + myArray.join(', ');
+                        let errorMessage = "Found " + myArray.length + " dumps in " + res[i] + " : " + myArray.join(', ');
+                        core.setFailed(errorMessage);
                     }
-
-
                 }
-
             }
-            if(foundDumps) {
-                throw(new Error(errorMessage));
+            if(!foundDumps) {
+                core.setOutput('No dumps found in twig files');
             }
-            core.setOutput('No dumps found in twig files');
         }
     });
 
