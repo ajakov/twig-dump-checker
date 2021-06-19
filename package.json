@@ -1,0 +1,27 @@
+{
+  "name": "twig-dump-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajakov/twig-dump-checker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajakov/twig-dump-checker/issues"
+  },
+  "homepage": "https://github.com/ajakov/twig-dump-checker#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "glob": "^7.1.7",
+    "path": "^0.12.7"
+  }
+}
