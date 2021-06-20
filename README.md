@@ -20,3 +20,4 @@ The time when the check is completed.
 uses: ajakov/twig-dump-checker@v0.2
 with:
   source-dir: './src'
+```

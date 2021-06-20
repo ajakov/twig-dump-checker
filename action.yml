@@ -1,13 +1,13 @@
-name: 'Twig Dump Checker'
-description: 'Checks for accidental dump in twig files'
+name: "Twig Dump Checker"
+description: "Checks for accidental dump in twig files"
 inputs:
-    source-dir:  # id of input
-        description: 'Source directory'
-        required: true
-        default: './src'
+  source-dir: # id of input
+    description: "Source directory"
+    required: true
+    default: "./src"
 outputs:
-    time: # id of output
-        description: 'The time of the check'
+  time: # id of output
+    description: "The time of the check"
 runs:
-    using: 'node12'
-    main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
