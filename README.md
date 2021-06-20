@@ -1,6 +1,6 @@
 # Var Dump Checker GitHub action
 
-This action checks for accidental remaining dump calls in your twig files. 
+This action checks for accidental remaining dump calls in your twig files.
 
 ## Inputs
 
