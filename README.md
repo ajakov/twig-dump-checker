@@ -17,7 +17,7 @@ The time when the check is completed.
 ## Example usage
 
 ```
-uses: ajakov/twig-dump-checker@v0.3
+uses: ajakov/twig-dump-checker@v0.4
 with:
   source-dir: './src'
 ```

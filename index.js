@@ -21,7 +21,8 @@ try {
       for (let i = 0; i < res.length; i++) {
         let extension = path.extname(res[i]);
         if (extension == ".twig") {
-          let re = /{{[ ]*dump\([^)]*\)[ ]*}}/gm;
+          let re =
+            /((?<!{#\s*){{[ ]*dump\([^)]*\)[ ]*}}(?!\s*#}))|((?<={#\s*){{[ ]*dump\([^)]*\)[ ]*}}(?!\s*#}))|((?<!{#\s*){{[ ]*dump\([^)]*\)[ ]*}}(?=\s*#}))/gm;
           const data = fs.readFileSync(res[i], "utf8");
           var myArray = data.match(re);
           if (myArray) {
