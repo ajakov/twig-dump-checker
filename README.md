@@ -6,7 +6,7 @@ This action checks for accidental remaining dump calls in your twig files.
 
 ## `source-dir`
 
-**Required** Tha path to directory where your source files are located
+**Required** The path to the directory where your source files are located
 
 ## Outputs
 
